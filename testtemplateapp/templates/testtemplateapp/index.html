@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+{% block title %}
+    Басты бет
+{% endblock %}
+
+{% block main_content %}
+    <ul>
+    {% for feed in feeds %}
+        <li>
+            {{ feed.email }}
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block extend_content %}
+    <a href="{% url 'test:feedback' %}">Ақпаратқа жазылу</a>
+{% endblock %}

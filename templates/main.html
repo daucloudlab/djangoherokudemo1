@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+<div class="container">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'test:home' %}">Басты бет</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'test:feedback' %}">Ақпаратқа жазылу</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'test:about' %}">Сайт жайлы</a>
+          </li>
+    </ul>
+</div>
+
+<div class="container">
+    {% block main_content %}
+        dsdf
+    {% endblock %}
+</div>
+
+<div class="container">
+    {% block extend_content %}
+
+    {% endblock %}
+</div>
+
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+</body>
+</html>
